@@ -1,3 +1,8 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+    response.setContentType("text/html; charset=UTF-8");
+    response.setCharacterEncoding("UTF-8");
+%>
 <%@page import="java.text.DateFormat"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -13,7 +18,7 @@
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
            <%@include file="businessMessage.jsp" %>
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Add Fee</h3>
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Төлемдер қосу</h3>
             
              
             <sf:form method="post" action="${pageContext.request.contextPath}/addFee" modelAttribute="form">
@@ -24,14 +29,14 @@
                 <div class="col-md-6 mb-4 pb-2">
                   
                   <select class="select form-control-lg" name="studentId">
-                  <option value="1" disabled>Select Student</option>
+                  <option value="1" disabled>Таңдаңыз</option>
                     <c:forEach items="${userList}" var="userList" varStatus="u">
                     
                     <option value="${userList.id}">${userList.firstName} ${userList.lastName}</option>
                    
                     </c:forEach>
                   </select>
-                  <label class="form-label select-label">Select Student</label>
+                  <label class="form-label select-label">Оқушыны таңдаңыз</label>
 
                 </div>
 
@@ -42,7 +47,7 @@
                   <s:bind path="amount">
                   <font color="red" style="font-size: 15px"><sf:errors path="${status.expression}" /></font>
                     <sf:input type="text" id="amount" class="form-control form-control-lg" path="amount"/>
-                    <label class="form-label" for="amount">Amount</label>
+                    <label class="form-label" for="amount">Сомасы</label>
                   </s:bind>
                   </div>
                
@@ -54,13 +59,13 @@
                 <c:choose>
   				<c:when test="${form.id>0}">
    				  <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" type="submit" value="Update" />
+                <input class="btn btn-primary btn-lg" type="submit" value="Жаңарту" />
               </div>   
  			</c:when>
 
   			<c:otherwise>
              <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" type="submit" value="Add" />
+                <input class="btn btn-primary btn-lg" type="submit" value="Қосу" />
               </div>
   			</c:otherwise>
 			</c:choose> 

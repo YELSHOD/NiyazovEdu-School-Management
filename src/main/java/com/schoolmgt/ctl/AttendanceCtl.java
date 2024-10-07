@@ -64,11 +64,11 @@ public class AttendanceCtl {
 			if(form.getId()>0) {
 				
 				service.update(bean);
-				model.addAttribute("success", "Attendance Updated successfully");
+				model.addAttribute("success", "Оқушы үлгерімі сәтті өзгертілді");
 			}else {
 				
 				service.Add(bean);
-				model.addAttribute("success", "Attendance Added successfully");
+				model.addAttribute("success", "Оқушы үлгерімі сәтті сақталды");
 			}
 			
 			return "attendance";
@@ -111,7 +111,7 @@ public class AttendanceCtl {
 		
 		List<AttendanceDTO> list =	service.list();
 		model.addAttribute("list", list);
-		model.addAttribute("success", "Attendance Deleted successfully");
+		model.addAttribute("success", "Оқушы үлгерімі сәтті жойылды");
 		return "attendancelist";
 	}
 	

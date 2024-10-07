@@ -55,11 +55,11 @@ public class SubjectCtl {
 			if(form.getId()>0) {
 				
 				service.update(bean);
-				model.addAttribute("success", "Subject Updated successfully");
+				model.addAttribute("success", "Пән туралы ақпарат жаңартылды");
 			}else {
 				
 				service.Add(bean);
-				model.addAttribute("success", "Subject Added successfully");
+				model.addAttribute("success", "Пән сәтті сақталды");
 			}
 			
 			return "subject";
@@ -98,7 +98,7 @@ public class SubjectCtl {
 		
 		List<SubjectDTO> list =	service.list();
 		model.addAttribute("list", list);
-		model.addAttribute("success", "Class Deleted successfully");
+		model.addAttribute("success", "Пән сәтті өшірілді");
 		return "subjectlist";
 	}
 	

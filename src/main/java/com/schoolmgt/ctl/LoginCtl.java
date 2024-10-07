@@ -28,15 +28,12 @@ public class LoginCtl {
 		
 	UserDTO user =	service.Login(dto.getEmail(), dto.getPassword());
 	if(user == null) {
-		model.addAttribute("error", "Invalid UserName or Password");
+		model.addAttribute("error", "Пайдаланушы аты немесе құпиясөзде қате бар. Өрістердің дұрыс толтырылуын тексеріңіз.\n");
 		return "login";
 	}else {
 		session.setAttribute("user", user);
 		session.setAttribute("uid", dto.getId());
 		return "home";
+		}
 	}
-	
-		
-	}
-
 }

@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+    response.setContentType("text/html; charset=UTF-8");
+    response.setCharacterEncoding("UTF-8");
+%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="crt"%>
@@ -8,21 +11,21 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>User List</title>
+<title>?????????????? ??????</title>
 </head>
 <body >
 
 <div class="container" >
 
-<h2 style="padding: 30px">Marks List according to the subject</h2>
+<h2 style="padding: 30px">Бағалар тізімі</h2>
 <%@include file="businessMessage.jsp" %>
 <table class="table bg-light text-dark">
   <thead>
     <tr>
-      <th scope="col">Subjects</th>
-      <th scope="col">Marks</th>   
-      <th scope="col">studentName</th> 
-      <th scope="col">studentId</th>  
+      <th scope="col">Пәндер</th>
+      <th scope="col">Бағалар</th>
+      <th scope="col">Оқушы аты-жөні</th>
+      <th scope="col">Оқушы идентификаторы</th>
     </tr>
   </thead>
   <tbody>

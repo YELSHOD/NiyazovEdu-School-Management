@@ -17,28 +17,28 @@ import lombok.Setter;
 
 public class UserForm extends BaseDTO {
 	
-	@NotEmpty(message = "First name is required")
+	@NotEmpty(message = "Міндетті түрде толтыру керек")
 	private String firstName;
 
-	@NotEmpty(message = "Last name is required")
+	@NotEmpty(message = "Міндетті түрде толтыру керек")
 	private String lastName;
 	
-	@NotEmpty(message = "DOB name is required")
+	@NotEmpty(message = "Міндетті түрде толтыру керек")
 	private String dob;
 	
-	@NotEmpty(message = "First name is required")
+	@NotEmpty(message = "Міндетті түрде таңдалуы керек")
 	private String gender;
 	
-	@NotEmpty(message = "First name is required")
+	@NotEmpty(message = "Міндетті түрде толтыру керек")
 	private String email;
 	
-	@NotEmpty(message = "First name is required")
+	@NotEmpty(message = "Міндетті түрде толтыру керек")
 	private String password;
 	
-	@NotEmpty(message = "First name is required")
+	@NotEmpty(message = "Міндетті түрде толтыру керек")
 	private String phoneNumber;
 	
-	@NotEmpty(message = "User Role is required")
+	@NotEmpty(message = "Міндетті түрде таңдалуы керек")
 	private String userRole;
 	
 	private String operation;

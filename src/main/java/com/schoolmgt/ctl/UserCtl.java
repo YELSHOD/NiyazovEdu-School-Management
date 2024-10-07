@@ -45,11 +45,11 @@ public class UserCtl {
 			if(form.getId()>0) {
 				
 				service.update(bean);
-				model.addAttribute("success", "User Updated successfully");
+				model.addAttribute("success", "Жаңарту сәтті өтті");
 			}else {
 				
 				service.Add(bean);
-				model.addAttribute("success", "Registration successfully");
+				model.addAttribute("success", "Тіркелу сәтті өтті");
 			}
 			
 			return "registration";
@@ -66,7 +66,6 @@ public class UserCtl {
 	List<UserDTO> list = service.list();
 	model.addAttribute("list", list);
 	return "userlist";
-		
 	}
 	
 	@GetMapping("/userEdit")	
@@ -84,7 +83,7 @@ public class UserCtl {
 		
 		List<UserDTO> list =	service.list();
 		model.addAttribute("list", list);
-		model.addAttribute("success", "User Deleted successfully");
+		model.addAttribute("success", "Пайдаланушы сәтті өшірілді");
 		return "userlist";
 	}
 	
@@ -94,7 +93,7 @@ public class UserCtl {
 		
 		List<UserDTO> list =	service.list();
 		model.addAttribute("list", list);
-		model.addAttribute("success", "User Deleted successfully");
+		model.addAttribute("success", "Пайдаланушы сәтті өшірілді");
 		return "userlist";
 	}
 	
@@ -131,5 +130,4 @@ public class UserCtl {
 		return "userlist";
 	}
 	
-
 }

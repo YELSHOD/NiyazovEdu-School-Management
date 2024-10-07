@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+  response.setContentType("text/html; charset=UTF-8");
+  response.setCharacterEncoding("UTF-8");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,10 +19,16 @@
 <body>
 <div class="bg-image bgimage d-flex justify-content-center align-items-center">
   <section>
-    <h1 class="mt-4 mb-5"><strong>Welcome To School Management</strong></h1>
+    <h1 class="mt-4 mb-5"><strong></strong></h1>
 </section>
 </div>
 
+<div class="fixed-bottom mb-3 ml-3">
+  <a href="tel:+77085143050" class="btn btn-success mr-2" target="_blank">Қоңырау шалу</a>
+  <a href="https://wa.me/77085143050?text=Administrator" class="btn btn-success mr-2" target="_blank">Whatsapp</a>
+  <a href="https://t.me/yelshod" class="btn btn-success mr-2" target="_blank">Telegram</a>
+  <a href="https://www.instagram.com/yelshod_/" class="btn btn-success" target="_blank">Instagram</a>
+</div>
 
 </body>
 </html>

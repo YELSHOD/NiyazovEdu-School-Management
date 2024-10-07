@@ -23,7 +23,7 @@ public class UserService {
 	user = dao.findByEmail(dto.getEmail());
 	System.out.println("user by email........: "+user);
 	if(user != null)
-		throw new RecordNotFoundException("Email is already exists..");
+		throw new RecordNotFoundException("Басқа почта жазып көріңіз");
 	    System.out.println("dto Before Save: "+dto);
 	    user = dao.save(dto);
        return  user;

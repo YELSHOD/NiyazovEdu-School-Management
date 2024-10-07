@@ -64,9 +64,9 @@ public class AssignClassCtl {
    
     if(dto2 == null) {
     	 service.Add(dto);	
-    		model.addAttribute("success", dto.getStudentName()+ "is added into class" +dto.getClassName());
+    		model.addAttribute("success", dto.getStudentName()+ " " + dto.getClassName() + " " + "сыныбына сәтті қосылды" );
     }else {
-    	model.addAttribute("error", "Already Assigned");
+    	model.addAttribute("error", "Оқущы алдын сыныпқа қосылып қойылған");
     }
     
    

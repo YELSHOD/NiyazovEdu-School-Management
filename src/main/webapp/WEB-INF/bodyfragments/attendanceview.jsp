@@ -1,3 +1,8 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+    response.setContentType("text/html; charset=UTF-8");
+    response.setCharacterEncoding("UTF-8");
+%>
 <%@page import="java.text.DateFormat"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -13,7 +18,7 @@
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
            <%@include file="businessMessage.jsp" %>
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Add Attendance</h3>
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Сабаққа қатысу тізімін өзгерту</h3>
             
              
             <sf:form method="post" action="${pageContext.request.contextPath}/addAttendance" modelAttribute="form">
@@ -24,14 +29,14 @@
                 <div class="col-md-6 mb-4 pb-2">
                   
                   <select class="select form-control-lg" name="studentId">
-                  <option value="1" disabled>Select Student</option>
+                  <option value="1" disabled>Оқушыны таңдаңыз</option>
                     <c:forEach items="${userList}" var="userList" varStatus="u">
                     
                     <option value="${userList.id}">${userList.firstName} ${userList.lastName}</option>
                    
                     </c:forEach>
                   </select>
-                  <label class="form-label select-label">Select Student</label>
+                  <label class="form-label select-label">Оқушыны таңдаңыз</label>
 
                 </div>
 
@@ -39,24 +44,24 @@
                    <div class="col-md-6 mb-4 pb-2">
                   
                   <select class="select form-control-lg" name="classId">
-                  <option value="1" disabled>Select Class</option>
+                  <option value="1" disabled>Таңдаңыз</option>
                     <c:forEach items="${classList}" var="classList" varStatus="u">
                     <option value="${classList.id}">${classList.className}</option>
                     </c:forEach>
                   </select>
-                  <label class="form-label select-label">Select Class</label>
+                  <label class="form-label select-label">Оқушы сыныбын таңдаңыз</label>
 
                 </div>
                 
                        <div class="col-md-6 mb-4 pb-2">
                   
                   <select class="select form-control-lg" name="status">
-                  <option value="1" disabled>Select status</option>
-                   
-                    <option value="Absent">Absent</option>
-                 <option value="Present">Present</option>
+                  <option value="1" disabled>Таңдаңыз</option>
+
+                      <option value="Сабақта бар">Сабақта бар</option>
+                      <option value="Сабақта жоқ">Сабақта жоқ</option>
                   </select>
-                  <label class="form-label select-label">Select Class</label>
+                  <label class="form-label select-label">Параметрді таңдаңыз</label>
 
                 </div>
           
@@ -72,7 +77,7 @@
 
   			<c:otherwise>
              <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" type="submit" value="Add" />
+                <input class="btn btn-primary btn-lg" type="submit" value="Қосу" />
               </div>
   			</c:otherwise>
 			</c:choose> 

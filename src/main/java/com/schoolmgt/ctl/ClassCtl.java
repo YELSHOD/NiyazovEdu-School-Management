@@ -44,15 +44,15 @@ public class ClassCtl {
 			if(form.getId()>0) {
 				
 				service.update(bean);
-				model.addAttribute("success", "Class Updated successfully");
+				model.addAttribute("success", "Сынып сәтті жаңартылды");
 			}else {
 				ClassDTO dto = service.findByClassName(bean.getClassName());
 				if(dto == null) {
 					service.Add(bean);
-					model.addAttribute("success", "Class Added successfully");
+					model.addAttribute("success", "Сынып сәтті қосылды");
 				}else {
 					
-					model.addAttribute("error", "Class is already added");
+					model.addAttribute("error", "Сынып тізімде бар басқа сынып қосып көріңіз");
 				}
 				
 			}

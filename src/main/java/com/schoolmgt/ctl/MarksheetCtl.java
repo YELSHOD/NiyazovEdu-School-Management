@@ -126,7 +126,7 @@ public class MarksheetCtl {
 			model.addAttribute("subjectList", subjectDto);
 			return "subjectmark";
 			}else {
-				model.addAttribute("error", "First Assing a class to this student");
+				model.addAttribute("error", "Алдымен бұл оқушыны сыныпқа қосыңыз");
 				return "subjectmark";
 			}
 			
@@ -171,10 +171,10 @@ public class MarksheetCtl {
 				dao.save(dto);
 				dto = new MarksheetDTO();
 			}
-			model.addAttribute("success", "Marks Added Sucessfully");
+			model.addAttribute("success", "Бағалар сәтті қойылды");
 			
 		}else {
-			model.addAttribute("error", "Marks are already added for this students");
+			model.addAttribute("error", "Бұл оқушы үшін бағалар алдын қойылған...");
 		}
 			
 			return "successmsg";

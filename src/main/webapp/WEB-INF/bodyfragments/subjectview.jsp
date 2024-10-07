@@ -1,3 +1,8 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+    response.setContentType("text/html; charset=UTF-8");
+    response.setCharacterEncoding("UTF-8");
+%>
 <%@page import="java.text.DateFormat"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -13,7 +18,7 @@
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
            <%@include file="businessMessage.jsp" %>
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Add Subject</h3>
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Пәнді қосу</h3>
   
             <sf:form method="post" action="${pageContext.request.contextPath}/addSubject" modelAttribute="form">
             <sf:input type="hidden" id="id" class="form-control form-control-lg" path="id" name="id" value="${form.id}"/>
@@ -23,14 +28,14 @@
                 <div class="col-md-6 mb-4 pb-2">
                   
                   <select class="select form-control-lg" name="classId">
-                  <option value="1" disabled>Select Subject</option>
+                  <option value="1" disabled>Сынып атауы</option>
                     <c:forEach items="${list}" var="list" varStatus="u">
                     
                     <option value="${list.id}">${list.className}</option>
                    
                     </c:forEach>
                   </select>
-                  <label class="form-label select-label">Select Subject</label>
+                  <label class="form-label select-label">Сынып атауы</label>
                 </div>         
               </div>
               <div class="row">
@@ -40,7 +45,7 @@
                   <font color="red" style="font-size: 15px"><sf:errors path="${status.expression}" /></font>
                   <sf:input type="text" id="subjectName" class="form-control form-control-lg" path="subjectName" name="subjectName"/>
                   </s:bind>      
-                  <label class="form-label" for="subjectName">Subject Name</label>
+                  <label class="form-label" for="subjectName">Пән атауы</label>
                   
                   </div>
 				 
@@ -51,7 +56,7 @@
                   <s:bind path="description">
                   <font color="red" style="font-size: 15px"><sf:errors path="${status.expression}" /></font>
                     <sf:input type="text" id="description" class="form-control form-control-lg" path="description"/>
-                    <label class="form-label" for="description">Description</label>
+                    <label class="form-label" for="description">Пән туралы сипаттама</label>
                   </s:bind>
                   </div>
                
@@ -62,13 +67,13 @@
                 <c:choose>
   				<c:when test="${form.id>0}">
    				  <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" type="submit" value="Update" />
+                <input class="btn btn-primary btn-lg" type="submit" value="Жаңарту" />
               </div>   
  			</c:when>
 
   			<c:otherwise>
              <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" type="submit" value="Add" />
+                <input class="btn btn-primary btn-lg" type="submit" value="Қосу" />
               </div>
   			</c:otherwise>
 			</c:choose> 

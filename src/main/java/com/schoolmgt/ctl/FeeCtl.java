@@ -61,11 +61,11 @@ public class FeeCtl {
 			bean.setStudentName(userService.findUserById(bean.getStudentId()).getFirstName());
 			if(form.getId()>0) {
 				service.update(bean);
-				model.addAttribute("success", "Fee Updated successfully");
+				model.addAttribute("success", "Төлем сәтті жаңартылды");
 			}else {
 				
 				service.Add(bean);
-				model.addAttribute("success", "Fee Added successfully");
+				model.addAttribute("success", "Төлем сәтті сақталды");
 			}
 			
 			return "fee";
@@ -113,7 +113,7 @@ public class FeeCtl {
 		
 		List<FeeDTO> list =	service.list();
 		model.addAttribute("list", list);
-		model.addAttribute("success", "Fee Deleted successfully");
+		model.addAttribute("success", "Төлем сәтті жойылды");
 		return "feelist";
 	}
 
