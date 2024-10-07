@@ -1,0 +1,13 @@
+body {
+    background-color: #fff; /* Цвет фона страницы */
+    color: #333; /* Цвет текста */
+}
+
+.navbar {
+    background-color: #f8f9fa; /* Цвет фона навигационной панели */
+}
+
+.navbar-nav .nav-link {
+    color: #333; /* Цвет текста ссылок */
+}
+
